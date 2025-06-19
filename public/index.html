@@ -125,7 +125,12 @@
       statusText.innerText = 'Submitting...';
 
       try {
-        const response = await fetch("http://localhost:3000/submit-kyc", {
+        const response = await fetch("fetch("https://kyc-proxy.onrender.com/submit-kyc", {
+  method: "POST",
+  headers: { "Content-Type": "application/json" },
+  body: JSON.stringify(payload)
+});
+/submit-kyc", {
           method: "POST",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify(payload)
